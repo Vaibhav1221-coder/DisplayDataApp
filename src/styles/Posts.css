@@ -1,0 +1,120 @@
+/* src/pages/Posts.css */
+
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eef2f5; /* Light grayish-blue background */
+  }
+  
+  /* Container for Posts */
+  .posts-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Page Title */
+  .page-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #34495e; /* Dark gray */
+    margin-bottom: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  /* Posts List */
+  .posts-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    width: 100%;
+    justify-items: center;
+  }
+  
+  /* Post Card */
+  .post-card {
+    background-color: #fff;
+    border-radius: 10px;
+    border: 2px solid #3498db; /* Blue border for cards */
+    padding: 20px;
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Hover Effects for Post Cards */
+  .post-card:hover {
+    transform: translateY(-10px); /* Lift up the card */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    border-color: #2980b9; /* Darker blue border when hovered */
+  }
+  
+  /* Post Title */
+  .post-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2980b9; /* Blue color for title */
+    margin-bottom: 15px;
+    line-height: 1.4;
+    text-transform: capitalize;
+    text-decoration: underline;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #2980b9; /* Blue underline for title */
+  }
+  
+  /* Post Body */
+  .post-body {
+    font-size: 14px;
+    color: #7f8c8d; /* Light grayish text */
+    margin-bottom: 20px;
+    line-height: 1.6;
+    text-align: justify;
+  }
+  
+  /* Read More Link */
+  .read-more {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2980b9; /* Blue color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .read-more:hover {
+    color: #1abc9c; /* Greenish blue color on hover */
+  }
+  
+  /* Loading Message */
+  .loading {
+    font-size: 18px;
+    color: #95a5a6; /* Light gray */
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  /* Responsive Design for Smaller Screens */
+  @media (max-width: 768px) {
+    .posts-list {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .posts-list {
+      grid-template-columns: 1fr;
+    }
+  
+    .post-card {
+      max-width: 100%;
+    }
+  }
+  
